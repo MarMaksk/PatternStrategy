@@ -1,14 +1,15 @@
 package com.company.Interface;
 
 import java.util.Collection;
+import java.util.Optional;
 
 public interface DataOperationIntr {
-    void showData();
+    void showData(Collection collection);
 
-    void reversData();
+    void reversData(Collection collection);
 
-    void searchMax();
+    Optional searchMax(Collection collection);
 
-    void searchMin();
+    Optional searchMin(Collection collection);
 
 }

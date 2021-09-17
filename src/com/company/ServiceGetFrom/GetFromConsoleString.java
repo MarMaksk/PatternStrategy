@@ -9,9 +9,9 @@ public class GetFromConsoleString implements GetStringFromIntr {
     private Scanner sc = new Scanner(System.in);
 
 
-    public Collection<?> getData(Collection<String> collection) {
+    public Collection getData(Collection<String> collection) {
         int i = 0;
-        while (i < 10) {
+        while (i < 3) {
             collection.add(sc.nextLine());
             i++;
         }
