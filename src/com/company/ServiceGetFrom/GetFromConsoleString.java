@@ -1,17 +1,17 @@
-package com.company;
+package com.company.ServiceGetFrom;
 
 import com.company.Interface.GetStringFromIntr;
 
 import java.util.Collection;
 import java.util.Scanner;
 
-public class GetFromConsoleString implements GetStringFromIntr{
+public class GetFromConsoleString implements GetStringFromIntr {
     private Scanner sc = new Scanner(System.in);
 
-    @Override
-    public Collection<?> getData(Collection<String> collection, int count) {
+
+    public Collection<?> getData(Collection<String> collection) {
         int i = 0;
-        while (i < count) {
+        while (i < 10) {
             collection.add(sc.nextLine());
             i++;
         }

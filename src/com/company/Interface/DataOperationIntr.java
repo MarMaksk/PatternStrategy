@@ -2,8 +2,8 @@ package com.company.Interface;
 
 import java.util.Collection;
 
-public interface DataOperationIntr<E> {
-    void showData(Collection<? extends E> c);
+public interface DataOperationIntr {
+    void showData();
 
     void reversData();
 
@@ -11,5 +11,4 @@ public interface DataOperationIntr<E> {
 
     void searchMin();
 
-    void getData(GetIntegerFromIntr gfi);
 }
