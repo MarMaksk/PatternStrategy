@@ -5,6 +5,7 @@ import com.company.Interface.GetStringFromIntr;
 
 import java.util.Collection;
 import java.util.Optional;
+import java.util.OptionalInt;
 
 public class ServiceWithData {
     private GetStringFromIntr gfr;
@@ -29,11 +30,11 @@ public class ServiceWithData {
         this.doi.showData(collection);
     }
 
-    public Optional searchMax() {
+    public OptionalInt searchMax() {
         return this.doi.searchMax(collection);
     }
 
-    public Optional searchMin() {
+    public OptionalInt searchMin() {
         return this.doi.searchMin(collection);
     }
 

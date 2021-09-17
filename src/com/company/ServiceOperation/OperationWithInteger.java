@@ -1,20 +1,17 @@
 package com.company.ServiceOperation;
 
-import com.company.Interface.DataOperationIntr;
-
 import java.util.Collection;
-import java.util.Comparator;
-import java.util.Optional;
+import java.util.OptionalInt;
 
 public class OperationWithInteger extends GeneralOperation {
 
     @Override
-    public Optional searchMax(Collection collection) {
-        return collection.stream().max((x, y) -> Integer.compare((Integer) x, (Integer) y));
+    public OptionalInt searchMax(Collection collection) {
+        return collection.stream().mapToInt(num -> Integer.parseInt((String) num)).max();
     }
 
     @Override
-    public Optional searchMin(Collection collection) {
-        return collection.stream().min((x, y) -> Integer.compare((Integer) x, (Integer) y));
+    public OptionalInt searchMin(Collection collection) {
+        return collection.stream().mapToInt(num -> Integer.parseInt((String) num)).min();
     }
 }

@@ -1,27 +1,21 @@
 package com.company.ServiceOperation;
 
-import com.company.Interface.DataOperationIntr;
+import java.util.*;
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Optional;
-
-public class OperationWithString extends GeneralOperation implements  Comparator<String> {
+public class OperationWithString extends GeneralOperation implements Comparator<String> {
 
     public OperationWithString() {
     }
 
 
     @Override
-    public Optional searchMax(Collection collection) {
-        return collection.stream().sorted((x, y) -> compare(x.toString(), y.toString())).
-                sorted(Collections.reverseOrder()).findFirst();
+    public OptionalInt searchMax(Collection collection) {
+        return collection.stream().mapToInt(x -> Integer.valueOf(x.toString().length())).max();
     }
 
     @Override
-    public Optional searchMin(Collection collection) {
-        return collection.stream().sorted((x, y) -> compare(x.toString(), y.toString())).findFirst();
+    public OptionalInt searchMin(Collection collection) {
+        return collection.stream().mapToInt(x -> Integer.valueOf(x.toString().length())).min();
     }
 
     @Override
