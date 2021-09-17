@@ -6,24 +6,15 @@ import java.util.Collection;
 import java.util.Comparator;
 import java.util.Optional;
 
-public class OperationWithInteger implements DataOperationIntr {
-    @Override
-    public void showData(Collection collection) {
-
-    }
-
-    @Override
-    public void reversData(Collection collection) {
-       collection.stream().sorted(Comparator.reverseOrder());
-    }
+public class OperationWithInteger extends GeneralOperation {
 
     @Override
     public Optional searchMax(Collection collection) {
-        return null;
+        return collection.stream().max((x, y) -> Integer.compare((Integer) x, (Integer) y));
     }
 
     @Override
     public Optional searchMin(Collection collection) {
-        return null;
+        return collection.stream().min((x, y) -> Integer.compare((Integer) x, (Integer) y));
     }
 }

@@ -7,20 +7,11 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Optional;
 
-public class OperationWithString implements DataOperationIntr, Comparator<String> {
+public class OperationWithString extends GeneralOperation implements  Comparator<String> {
 
     public OperationWithString() {
     }
 
-    @Override
-    public void showData(Collection collection) {
-        collection.forEach(System.out::println);
-    }
-
-    @Override
-    public void reversData(Collection collection) {
-        collection.stream().sorted(Comparator.reverseOrder());
-    }
 
     @Override
     public Optional searchMax(Collection collection) {
