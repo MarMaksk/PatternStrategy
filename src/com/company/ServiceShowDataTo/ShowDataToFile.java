@@ -6,8 +6,8 @@ import java.io.*;
 import java.util.Collection;
 
 public class ShowDataToFile implements ShowDataIntr {
-    private File file = new File("data.dat");
-    private FileWriter fr = new FileWriter("data.dat");
+    private File file = new File("data.txt");
+    private FileWriter fr = new FileWriter(file);
 
     public ShowDataToFile() throws IOException {
     }

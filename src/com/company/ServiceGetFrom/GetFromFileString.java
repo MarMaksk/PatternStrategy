@@ -6,8 +6,8 @@ import java.io.*;
 import java.util.Collection;
 
 public class GetFromFileString implements GetStringFromIntr {
-    private File file = new File("data.dat");
-    private FileReader fr = new FileReader("data.dat");
+    private File file = new File("data.txt");
+    private FileReader fr = new FileReader(file);
 
     public GetFromFileString() throws FileNotFoundException {
     }

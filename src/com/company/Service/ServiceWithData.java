@@ -1,20 +1,22 @@
-package com.company;
+package com.company.Service;
 
 import com.company.Interface.DataOperationIntr;
 import com.company.Interface.GetStringFromIntr;
+import com.company.Interface.ShowDataIntr;
 
 import java.util.Collection;
-import java.util.Optional;
 import java.util.OptionalInt;
 
 public class ServiceWithData {
     private GetStringFromIntr gfr;
     private DataOperationIntr doi;
+    private ShowDataIntr sdi;
     private Collection collection;
 
-    public ServiceWithData(GetStringFromIntr gfr, DataOperationIntr doi, Collection collection) {
+    public ServiceWithData(GetStringFromIntr gfr, DataOperationIntr doi, ShowDataIntr sdi, Collection collection) {
         this.gfr = gfr;
         this.doi = doi;
+        this.sdi = sdi;
         this.collection = collection;
     }
 
@@ -27,7 +29,7 @@ public class ServiceWithData {
     }
 
     public void showData() {
-        this.doi.showData(collection);
+        this.sdi.showData(collection);
     }
 
     public OptionalInt searchMax() {
