@@ -11,5 +11,5 @@ public interface DataOperationIntr<E> {
 
     void searchMin();
 
-    void getData(GetFromIntr gfi);
+    void getData(GetIntegerFromIntr gfi);
 }
