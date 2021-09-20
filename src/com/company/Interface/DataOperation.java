@@ -4,7 +4,7 @@ import java.util.Collection;
 import java.util.Optional;
 import java.util.OptionalInt;
 
-public interface DataOperationIntr {
+public interface DataOperation {
 
     void reversData(Collection collection);
 

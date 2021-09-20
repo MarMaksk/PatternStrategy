@@ -1,10 +1,10 @@
-package com.company.ServiceShowDataTo;
+package com.company.DataTo;
 
-import com.company.Interface.ShowDataIntr;
+import com.company.Interface.DataTo;
 
 import java.util.Collection;
 
-public class ShowDataToConsole implements ShowDataIntr {
+public class DataToConsole implements DataTo {
 
     @Override
     public void showData(Collection<?> collection) {

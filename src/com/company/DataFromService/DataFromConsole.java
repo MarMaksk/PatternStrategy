@@ -1,11 +1,11 @@
-package com.company.ServiceGetFrom;
+package com.company.DataFromService;
 
-import com.company.Interface.GetStringFromIntr;
+import com.company.Interface.DataFrom;
 
 import java.util.Collection;
 import java.util.Scanner;
 
-public class GetFromConsoleString implements GetStringFromIntr {
+public class DataFromConsole implements DataFrom {
     private Scanner sc = new Scanner(System.in);
 
 

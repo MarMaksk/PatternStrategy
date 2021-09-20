@@ -1,15 +1,15 @@
-package com.company.ServiceShowDataTo;
+package com.company.DataTo;
 
-import com.company.Interface.ShowDataIntr;
+import com.company.Interface.DataTo;
 
 import java.io.*;
 import java.util.Collection;
 
-public class ShowDataToFile implements ShowDataIntr {
+public class DataToFile implements DataTo {
     private File file = new File("data.txt");
     private FileWriter fr = new FileWriter(file);
 
-    public ShowDataToFile() throws IOException {
+    public DataToFile() throws IOException {
     }
 
     @Override

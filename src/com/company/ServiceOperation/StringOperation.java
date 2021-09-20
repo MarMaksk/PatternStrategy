@@ -2,9 +2,9 @@ package com.company.ServiceOperation;
 
 import java.util.*;
 
-public class OperationWithString extends GeneralOperation implements Comparator<String> {
+public class StringOperation extends GeneralOperation implements Comparator<String> {
 
-    public OperationWithString() {
+    public StringOperation() {
     }
 
 

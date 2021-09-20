@@ -1,11 +1,11 @@
 package com.company;
 
-import com.company.Service.ServiceWithData;
-import com.company.ServiceGetFrom.GetFromConsoleString;
-import com.company.ServiceOperation.OperationWithInteger;
-import com.company.ServiceOperation.OperationWithString;
-import com.company.ServiceShowDataTo.ShowDataToConsole;
-import com.company.ServiceShowDataTo.ShowDataToFile;
+import com.company.Service.DataService;
+import com.company.DataFromService.DataFromConsole;
+import com.company.ServiceOperation.IntegerOperation;
+import com.company.ServiceOperation.StringOperation;
+import com.company.DataTo.DataToConsole;
+import com.company.DataTo.DataToFile;
 
 import java.io.IOException;
 import java.util.HashSet;
@@ -14,15 +14,15 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        ServiceWithData op = new ServiceWithData(
-                new GetFromConsoleString(), new OperationWithString(), new ShowDataToFile(), new HashSet());
+        DataService op = new DataService(
+                new DataFromConsole(), new StringOperation(), new DataToFile(), new HashSet());
         op.runGetData();
         //op.revers();
         op.showData();
         System.out.println(op.searchMax().getAsInt());
         System.out.println(op.searchMin().getAsInt());
-        ServiceWithData op2 = new ServiceWithData(
-                new GetFromConsoleString(), new OperationWithInteger(), new ShowDataToConsole(), new HashSet());
+        DataService op2 = new DataService(
+                new DataFromConsole(), new IntegerOperation(), new DataToConsole(), new HashSet());
         op2.runGetData();
         //op2.revers();
         op2.showData();

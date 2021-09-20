@@ -1,15 +1,15 @@
-package com.company.ServiceGetFrom;
+package com.company.DataFromService;
 
-import com.company.Interface.GetStringFromIntr;
+import com.company.Interface.DataFrom;
 
 import java.io.*;
 import java.util.Collection;
 
-public class GetFromFileString implements GetStringFromIntr {
+public class DataFromFile implements DataFrom {
     private File file = new File("data.txt");
     private FileReader fr = new FileReader(file);
 
-    public GetFromFileString() throws FileNotFoundException {
+    public DataFromFile() throws FileNotFoundException {
     }
 
     @Override

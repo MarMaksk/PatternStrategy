@@ -3,7 +3,7 @@ package com.company.ServiceOperation;
 import java.util.Collection;
 import java.util.OptionalInt;
 
-public class OperationWithInteger extends GeneralOperation {
+public class IntegerOperation extends GeneralOperation {
 
     @Override
     public OptionalInt searchMax(Collection collection) {

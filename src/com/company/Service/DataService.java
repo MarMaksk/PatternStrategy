@@ -1,19 +1,19 @@
 package com.company.Service;
 
-import com.company.Interface.DataOperationIntr;
-import com.company.Interface.GetStringFromIntr;
-import com.company.Interface.ShowDataIntr;
+import com.company.Interface.DataOperation;
+import com.company.Interface.DataFrom;
+import com.company.Interface.DataTo;
 
 import java.util.Collection;
 import java.util.OptionalInt;
 
-public class ServiceWithData {
-    private GetStringFromIntr gfr;
-    private DataOperationIntr doi;
-    private ShowDataIntr sdi;
+public class DataService {
+    private DataFrom gfr;
+    private DataOperation doi;
+    private DataTo sdi;
     private Collection collection;
 
-    public ServiceWithData(GetStringFromIntr gfr, DataOperationIntr doi, ShowDataIntr sdi, Collection collection) {
+    public DataService(DataFrom gfr, DataOperation doi, DataTo sdi, Collection collection) {
         this.gfr = gfr;
         this.doi = doi;
         this.sdi = sdi;
@@ -24,7 +24,7 @@ public class ServiceWithData {
         this.collection = this.gfr.getData(collection);
     }
 
-    public void revers() {
+    public void reversData() {
         this.doi.reversData(collection);
     }
 
@@ -40,7 +40,7 @@ public class ServiceWithData {
         return this.doi.searchMin(collection);
     }
 
-    public void setDoi(DataOperationIntr doi) {
+    public void setDoi(DataOperation doi) {
         this.doi = doi;
     }
 }

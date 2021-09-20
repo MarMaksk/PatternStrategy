@@ -2,6 +2,6 @@ package com.company.Interface;
 
 import java.util.Collection;
 
-public interface ShowDataIntr {
+public interface DataTo {
     void showData(Collection<?> collection);
 }
